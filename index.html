@@ -659,7 +659,7 @@
             </div>
         </section>
 
-    <!-- TAB 6: CONSULTATION FORM -->
+           <!-- TAB 6: CONSULTATION FORM -->
         <section id="tab-consultation" class="tab-content hidden transition-opacity duration-300 py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -713,96 +713,100 @@
                         </div>
                     </div>
 
-<!-- Consultation Form connected to Formspree AJAX -->
-<div class="lg:col-span-7">
-    <div class="glass-panel p-8 rounded-3xl border border-brand-gold/30 shadow-2xl relative">
-        <!-- Success Message Box -->
-        <div data-fs-success class="hidden p-6 mb-6 rounded-xl bg-emerald-950/30 border border-emerald-500/40 text-center space-y-3">
-            <i class="fa-solid fa-circle-check text-3xl text-emerald-600"></i>
-            <h4 class="text-lg font-serif font-bold text-white">Mandate Request Received</h4>
-            <p class="text-xs text-slate-300">Your consultation ticket has been registered in our governance queue. We will review and respond within five business days.</p>
-        </div>
+                    <!-- Consultation Form connected to Formspree AJAX -->
+                    <div class="lg:col-span-7">
+                        <div class="glass-panel p-8 rounded-3xl border border-brand-gold/30 shadow-2xl relative">
+                            <!-- Success Message Box -->
+                            <div data-fs-success class="hidden p-6 mb-6 rounded-xl bg-emerald-950/30 border border-emerald-500/40 text-center space-y-3">
+                                <i class="fa-solid fa-circle-check text-3xl text-emerald-600"></i>
+                                <h4 class="text-lg font-serif font-bold text-white">Mandate Request Received</h4>
+                                <p class="text-xs text-black">Your consultation ticket has been registered in our governance queue. We will review and respond within five business day.</p>
+                            </div>
 
-        <form id="consultationForm" action="https://formspree.io/f/xdeazbqv" method="POST" class="space-y-5">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">Full Name *</label>
-                    <input type="text" name="fullName" id="consultName" data-fs-field required placeholder="e.g. Marcus Vance" class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
-                    <span data-fs-error="fullName" class="text-xs text-rose-400 mt-1 block"></span>
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">Designation *</label>
-                    <input type="text" name="designation" id="consultDesignation" data-fs-field required placeholder="e.g. Chief Risk Officer / Operations Director" class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
-                    <span data-fs-error="designation" class="text-xs text-rose-400 mt-1 block"></span>
+                            <form id="consultationForm" class="space-y-5">
+                                
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">Full Name *</label>
+                                        <input type="text" name="fullName" id="consultName" data-fs-field required placeholder="e.g. Marcus Vance" class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
+                                        <span data-fs-error="fullName" class="text-xs text-rose-400 mt-1 block"></span>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">Designation *</label>
+                                        <input type="text" name="designation" id="consultDesignation" data-fs-field required placeholder="e.g. Chief Risk Officer / Operations Director" class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
+                                        <span data-fs-error="designation" class="text-xs text-rose-400 mt-1 block"></span>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">Work Email *</label>
+                                        <input type="email" name="email" id="consultEmail" data-fs-field required placeholder="m.vance@company.com" class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
+                                        <span data-fs-error="email" class="text-xs text-rose-400 mt-1 block"></span>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">Phone Number *</label>
+                                        <input type="tel" name="phone" id="consultPhone" data-fs-field required placeholder="+971 50 123 4567" class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
+                                        <span data-fs-error="phone" class="text-xs text-rose-400 mt-1 block"></span>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">Organization Name *</label>
+                                        <input type="text" name="organization" id="consultOrg" data-fs-field required placeholder="e.g. Apex Financial Holdings" class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">Organization Size *</label>
+                                        <select name="organizationSize" id="consultOrgSize" data-fs-field required class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
+                                            <option value="" disabled selected>Select Organization Size</option>
+                                            <option value="50-199 employees">50 - 199 employees</option>
+                                            <option value="200-500 employees">200 - 500 employees</option>
+                                            <option value="500-1,000 employees">500 - 1,000 employees</option>
+                                            <option value="1,000-5,000+ employees">1,000 - 5,000+ employees</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">Service You Need *</label>
+                                    <select name="serviceNeeded" id="consultService" data-fs-field required class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
+                                        <option value="" disabled selected>Select Primary Service</option>
+                                        <option value="IT Project Management & Service Delivery">01: IT Project Management & Service Delivery</option>
+                                        <option value="IT Strategy & Technology Advisory">02: IT Strategy & Technology Advisory</option>
+                                        <option value="Cloud Infrastructure Management">03: Cloud Infrastructure Management</option>
+                                        <option value="Process Automation & Custom Development">04: Process Automation & Custom Development</option>
+                                        <option value="Managed Service & Support (MSP)">05: Managed Service & Support (MSP)</option>
+                                        <option value="Cyber Security & Compliance">06: Cyber Security & Compliance</option>
+					<option value="IP Camera">07: IP Camera</option>
+					<option value="Endpoint Management & Modern Deployment">08: Endpoint Management & Modern Deployment</option>
+					<option value="Microsoft Office 365 Solutions">09: Microsoft Office 365 Solutions</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">Primary Challenges *</label>
+                                    <input type="text" name="primaryChallenges" id="consultChallenges" data-fs-field required placeholder="e.g. Schedule slippage, lack of audit documentation, vendor accountability" class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">What are you trying to fix? *</label>
+                                    <textarea name="problemToFix" id="consultFix" data-fs-field rows="4" required placeholder="Describe the current mandate or project bottleneck in a few lines..." class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors resize-none"></textarea>
+                                </div>
+
+                                <!-- Form-level Error Container -->
+                                <span data-fs-error class="text-xs text-rose-400 block"></span>
+
+                                <button type="submit" data-fs-submit-btn class="w-full bg-gradient-to-r from-brand-gold via-amber-500 to-yellow-600 hover:opacity-95 text-slate-950 font-bold py-3.5 rounded-lg shadow-xl transition-all flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span>Submit Consultation Mandate</span>
+                                </button>
+                            </form>
+                       </div>
+                    </div>
+
                 </div>
             </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">Work Email *</label>
-                    <input type="email" name="email" id="consultEmail" data-fs-field required placeholder="m.vance@company.com" class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
-                    <span data-fs-error="email" class="text-xs text-rose-400 mt-1 block"></span>
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">Phone Number *</label>
-                    <input type="tel" name="phone" id="consultPhone" data-fs-field required placeholder="+971 50 123 4567" class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
-                    <span data-fs-error="phone" class="text-xs text-rose-400 mt-1 block"></span>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">Organization Name *</label>
-                    <input type="text" name="organization" id="consultOrg" data-fs-field required placeholder="e.g. Apex Financial Holdings" class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">Organization Size *</label>
-                    <select name="organizationSize" id="consultOrgSize" data-fs-field required class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
-                        <option value="" disabled selected>Select Organization Size</option>
-                        <option value="50-199 employees">50 - 199 employees</option>
-                        <option value="200-500 employees">200 - 500 employees</option>
-                        <option value="500-1,000 employees">500 - 1,000 employees</option>
-                        <option value="1,000-5,000+ employees">1,000 - 5,000+ employees</option>
-                    </select>
-                </div>
-            </div>
-
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Service You Need *</label>
-                <select name="serviceNeeded" id="consultService" data-fs-field required class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
-                    <option value="" disabled selected>Select Primary Service</option>
-                    <option value="IT Project Management & Service Delivery">01: IT Project Management & Service Delivery</option>
-                    <option value="IT Strategy & Technology Advisory">02: IT Strategy & Technology Advisory</option>
-                    <option value="Cloud Infrastructure Management">03: Cloud Infrastructure Management</option>
-                    <option value="Process Automation & Custom Development">04: Process Automation & Custom Development</option>
-                    <option value="Managed Service & Support (MSP)">05: Managed Service & Support (MSP)</option>
-                    <option value="Cyber Security & Compliance">06: Cyber Security & Compliance</option>
-                    <option value="IP Camera">07: IP Camera</option>
-                    <option value="Endpoint Management & Modern Deployment">08: Endpoint Management & Modern Deployment</option>
-                    <option value="Microsoft Office 365 Solutions">09: Microsoft Office 365 Solutions</option>
-                </select>
-            </div>
-
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Primary Challenges *</label>
-                <input type="text" name="primaryChallenges" id="consultChallenges" data-fs-field required placeholder="e.g. Schedule slippage, lack of audit documentation, vendor accountability" class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors">
-            </div>
-
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1.5">What are you trying to fix? *</label>
-                <textarea name="problemToFix" id="consultFix" data-fs-field rows="4" required placeholder="Describe the current mandate or project bottleneck in a few lines..." class="w-full bg-slate-900/90 border border-slate-700 focus:border-brand-gold rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none transition-colors resize-none"></textarea>
-            </div>
-
-            <!-- Form-level Error Container -->
-            <span data-fs-error class="text-xs text-rose-400 block"></span>
-
-            <button type="submit" data-fs-submit-btn class="w-full bg-gradient-to-r from-brand-gold via-amber-500 to-yellow-600 hover:opacity-95 text-slate-950 font-bold py-3.5 rounded-lg shadow-xl transition-all flex items-center justify-center gap-2">
-                <i class="fa-solid fa-paper-plane"></i>
-                <span>Submit Consultation Mandate</span>
-            </button>
-        </form>
-   </div>
-</div>
        
     </main>
 
