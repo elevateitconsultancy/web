@@ -10,6 +10,7 @@
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
         font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:;
         img-src 'self' data: https:;
+        frame-src 'self' https://www.google.com https://maps.google.com;
         connect-src 'self' https://formspree.io;
         frame-ancestors 'none';
         object-src 'none';
@@ -146,7 +147,7 @@
                     <button onclick="switchTab('services')" id="nav-services" class="nav-btn px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-brand-gold rounded-t-md transition-all">Services</button>
                     <button onclick="switchTab('approach')" id="nav-approach" class="nav-btn px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-brand-gold rounded-t-md transition-all">Approach</button>
                     <button onclick="switchTab('whoweserve')" id="nav-whoweserve" class="nav-btn px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-brand-gold rounded-t-md transition-all">Who We Serve</button>
-                   
+                    <button onclick="switchTab('contact')" id="nav-contact" class="nav-btn px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-brand-gold rounded-t-md transition-all">Contact</button>
                 </nav>
 
                 <!-- Action Button -->
@@ -172,6 +173,7 @@
             <button onclick="switchTab('services')" class="mobile-nav-btn w-full text-left px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 font-medium">Services Offered</button>
             <button onclick="switchTab('approach')" class="mobile-nav-btn w-full text-left px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 font-medium">Approach</button>
             <button onclick="switchTab('whoweserve')" class="mobile-nav-btn w-full text-left px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 font-medium">Who We Serve</button>
+            <button onclick="switchTab('contact')" class="mobile-nav-btn w-full text-left px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 font-medium">Contact</button>
             
             <div class="pt-2 border-t border-slate-800">
                 <button onclick="switchTab('consultation')" class="w-full bg-brand-gold text-slate-950 py-3 rounded-lg font-semibold text-center">Request Consultation</button>
@@ -729,7 +731,7 @@
                     <span class="text-brand-gold text-xs font-bold uppercase tracking-widest block mb-2">Client Profile</span>
                     <h1 class="text-3xl sm:text-3xl font-serif font-bold text-white mb-4">Built for mid-market and enterprise complexity.</h1>
                     <p class="text-slate-300 leading-relaxed text-lg">
-                        Our clients are organizations where technology carries real operational and regulatory weight: typically <strong> startups, mid range to enterprise </strong>, running a portfolio of programmes, with a board that expects evidence rather than assurances.
+                        Our clients are organizations where technology carries real operational and regulatory weight: typically <strong>200 to 5,000+ people</strong>, running a portfolio of programmes, with a board that expects evidence rather than assurances.
                     </p>
                 </div>
 
@@ -811,7 +813,111 @@
             </div>
         </section>
 
-        <!-- TAB 6: CONSULTATION FORM -->
+        <!-- TAB 6: CONTACT -->
+        <section id="tab-contact" class="tab-content hidden transition-opacity duration-300 py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="max-w-3xl mb-8">
+                    <span class="text-brand-gold text-xs font-bold uppercase tracking-widest block mb-2">Get In Touch</span>
+                    <h1 class="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">Contact Us</h1>
+                    <p class="text-slate-300 leading-relaxed">
+                        Connect with our senior advisory team in Dubai, UAE to discuss your technology governance, project assurance, or IT strategy requirements.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Contact Cards -->
+                    <div class="lg:col-span-5 space-y-6">
+                        
+                        <!-- Registered Address Card -->
+                        <div class="glass-panel p-6 rounded-2xl border border-brand-gold/20 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 text-brand-gold flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-serif font-bold text-base mb-1">Our Location</h3>
+                                <p class="text-slate-300 text-xs leading-relaxed">
+                                    Elevate IT Governance & Consultancy FZ-LLC<br>
+                                    Dubai, United Arab Emirates
+                                </p>
+                                <a href="https://maps.google.com/?q=Dubai+United+Arab+Emirates" target="_blank" class="inline-flex items-center gap-1.5 text-xs text-brand-gold font-semibold mt-3 hover:underline">
+                                    <span>Open in Google Maps</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Email Direct Card -->
+                        <div class="glass-panel p-6 rounded-2xl border border-brand-gold/20 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 text-brand-gold flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-serif font-bold text-base mb-1">Email Advisory</h3>
+                                <p class="text-slate-300 text-xs leading-relaxed mb-2">Send us your scope or RFP directly:</p>
+                                <a href="mailto:elevateitconsultancy@gmail.com" class="text-brand-gold font-mono text-xs font-bold hover:underline block break-all">
+                                    elevateitconsultancy@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Direct Card -->
+                        <div class="glass-panel p-6 rounded-2xl border border-brand-gold/20 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-serif font-bold text-base mb-1">WhatsApp Line</h3>
+                                <p class="text-slate-300 text-xs leading-relaxed mb-2">Direct client engagement & fast turnaround:</p>
+                                <a href="https://wa.me/971562424001?text=Hello%20Elevate%20IT%20Consultancy,%20I%20would%20like%20to%20discuss%20an%20IT%20governance%20mandate." target="_blank" class="text-emerald-400 font-mono text-xs font-bold hover:underline inline-flex items-center gap-1">
+                                    +971 56 242 4001 <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Quick Action Banner -->
+                        <div class="p-6 rounded-2xl bg-gradient-to-r from-brand-900 via-slate-900 to-brand-900 border border-brand-gold/30 text-center space-y-3">
+                            <h4 class="text-white font-serif font-bold text-sm">Looking for a Formal Engagement Proposal?</h4>
+                            <p class="text-xs text-slate-300">Submit your project details via our structured questionnaire for a response within five business days.</p>
+                            <button onclick="switchTab('consultation')" class="bg-brand-gold hover:bg-amber-500 text-slate-950 font-bold px-5 py-2.5 rounded-lg text-xs transition-colors">
+                                Request Consultation Mandate
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- Google Map Container -->
+                    <div class="lg:col-span-7">
+                        <div class="glass-panel p-3 rounded-3xl border border-brand-gold/30 shadow-2xl relative overflow-hidden">
+                            <div class="w-full h-[450px] rounded-2xl overflow-hidden relative">
+                                <iframe 
+                                    title="Elevate IT Governance Location - Dubai, UAE"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28882.26126620586!2d55.2600!3d25.2048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a67e24b%3A0xff45e502e1ceb7e2!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1710000000000!5m2!1sen!2s" 
+                                    class="w-full h-full border-0 filter grayscale contrast-125 opacity-90 hover:grayscale-0 transition-all duration-500" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                            <div class="p-4 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400 gap-2">
+                                <span class="flex items-center gap-1.5 text-slate-300">
+                                    <i class="fa-solid fa-map-pin text-brand-gold"></i>
+                                    Dubai, United Arab Emirates (FZ-LLC Entity)
+                                </span>
+                                <a href="https://maps.google.com/?q=Dubai+United+Arab+Emirates" target="_blank" class="text-brand-gold hover:underline font-semibold flex items-center gap-1">
+                                    View Full Google Map <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TAB 7: CONSULTATION FORM -->
         <section id="tab-consultation" class="tab-content hidden transition-opacity duration-300 py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -986,6 +1092,7 @@
                     <button onclick="switchTab('services')" class="block hover:text-brand-gold text-left">Services Offered</button>
                     <button onclick="switchTab('approach')" class="block hover:text-brand-gold text-left">Approach</button>
                     <button onclick="switchTab('whoweserve')" class="block hover:text-brand-gold text-left">Who We Serve</button>
+                    <button onclick="switchTab('contact')" class="block hover:text-brand-gold text-left">Contact</button>
                 </div>
 
                 <div class="md:col-span-3 space-y-2">
