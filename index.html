@@ -3,6 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' https://cdn.tailwindcss.com https://fonts.googleapis.com https://unpkg.com 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+        font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:;
+        img-src 'self' data: https:;
+        connect-src 'self' https://formspree.io;
+        frame-ancestors 'none';
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self' https://formspree.io;
+      ">
     <title>Elevate IT Governance & Consultancy FZ-LLC</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -580,11 +593,6 @@
 
                    </div>
 
-                        </div>
-
-
-
-
                 <!-- 4 Stage Process Timeline -->
                 <div class="space-y-8 relative">
                     
@@ -696,7 +704,7 @@
                                 <span class="text-xs font-mono font-bold text-brand-gold uppercase">Step 02</span>
                                 <h3 class="text-lg font-serif font-semibold text-white mt-1 mb-2">Scope and proposal</h3>
                                 <p class="text-xs text-slate-300 leading-relaxed">
-                                    We confirm the approach, timeline and fee in writing within five business day.
+                                    We confirm the approach, timeline and fee in writing within five business days.
                                 </p>
                             </div>
                             <div>
@@ -847,7 +855,7 @@
                             </div>
 
                             <p class="text-xs text-brand-gold/90 pt-2 border-t border-slate-800 italic">
-                                <i class="fa-solid fa-clock mr-1"></i> Every request is reviewed and answered within five business day.
+                                <i class="fa-solid fa-clock mr-1"></i> Every request is reviewed and answered within five business days.
                             </p>
                         </div>
 
@@ -862,9 +870,9 @@
                         <div class="glass-panel p-8 rounded-3xl border border-brand-gold/30 shadow-2xl relative">
                             <!-- Success Message Box -->
                             <div data-fs-success class="hidden p-6 mb-6 rounded-xl bg-emerald-950/30 border border-emerald-500/40 text-center space-y-3">
-                                <i class="fa-solid fa-circle-check text-3xl text-emerald-600"></i>
+                                <i class="fa-solid fa-circle-check text-3xl text-emerald-400"></i>
                                 <h4 class="text-lg font-serif font-bold text-white">Mandate Request Received</h4>
-                                <p class="text-xs text-black">Your consultation ticket has been registered in our governance queue. We will review and respond within five business day.</p>
+                                <p class="text-xs text-slate-300">Your consultation ticket has been registered in our governance queue. We will review and respond within five business days.</p>
                             </div>
 
                             <form id="consultationForm" class="space-y-5">
@@ -951,7 +959,7 @@
 
                 </div>
             </div>
-       
+        </section>
     </main>
 
     <!-- Footer -->
@@ -960,7 +968,7 @@
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
                 
                 <div class="md:col-span-6 space-y-3">
-                    <div class="flex items-center" onclick="switchTab('home')">
+                    <div class="flex items-center cursor-pointer" onclick="switchTab('home')">
                         <div class="w-8 h-8 rounded bg-gradient-to-br from-brand-gold to-amber-600 flex items-center justify-center font-serif text-slate-950 font-bold text-sm mr-2">
                             E
                         </div>
@@ -973,11 +981,11 @@
 
                 <div class="md:col-span-3 space-y-2">
                     <h4 class="text-white font-serif font-semibold text-sm mb-3">Quick Navigation</h4>
-                    <button onclick="switchTab('home')" class="block hover:text-brand-gold">Home</button>
-                    <button onclick="switchTab('mission')" class="block hover:text-brand-gold">Our Mission</button>
-                    <button onclick="switchTab('services')" class="block hover:text-brand-gold">Services Offered</button>
-                    <button onclick="switchTab('approach')" class="block hover:text-brand-gold">Approach</button>
-                    <button onclick="switchTab('whoweserve')" class="block hover:text-brand-gold">Who We Serve</button>
+                    <button onclick="switchTab('home')" class="block hover:text-brand-gold text-left">Home</button>
+                    <button onclick="switchTab('mission')" class="block hover:text-brand-gold text-left">Our Mission</button>
+                    <button onclick="switchTab('services')" class="block hover:text-brand-gold text-left">Services Offered</button>
+                    <button onclick="switchTab('approach')" class="block hover:text-brand-gold text-left">Approach</button>
+                    <button onclick="switchTab('whoweserve')" class="block hover:text-brand-gold text-left">Who We Serve</button>
                 </div>
 
                 <div class="md:col-span-3 space-y-2">
@@ -990,7 +998,6 @@
 
             <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-slate-500 gap-4">
                 <p>&copy; 2026 Elevate IT Governance & Consultancy FZ-LLC. All rights reserved.</p>
-                
             </div>
         </div>
     </footer>
