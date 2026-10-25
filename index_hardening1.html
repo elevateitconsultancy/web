@@ -18,6 +18,8 @@
         object-src 'none';
         base-uri 'self';
         form-action 'self' https://formspree.io;
+        upgrade-insecure-requests;
+        block-all-mixed-content;
       ">
     <title>Elevate IT Governance & Consultancy FZ-LLC</title>
     <!-- Tailwind CSS -->
@@ -27,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons with SRI Integrity -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <script>
         tailwind.config = {
@@ -869,6 +871,7 @@
                             </div>
 
                             <form id="consultationForm" class="space-y-5">
+                                
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                     <div>
                                         <label for="consultName" class="block text-xs font-semibold text-slate-300 mb-1.5">Full Name *</label>
@@ -922,9 +925,9 @@
                                         <option value="Process Automation & Custom Development">04: Process Automation & Custom Development</option>
                                         <option value="Managed Service & Support (MSP)">05: Managed Service & Support (MSP)</option>
                                         <option value="Cyber Security & Compliance">06: Cyber Security & Compliance</option>
-                                        <option value="IP Camera">07: IP Camera</option>
-                                        <option value="Endpoint Management & Modern Deployment">08: Endpoint Management & Modern Deployment</option>
-                                        <option value="Microsoft Office 365 Solutions">09: Microsoft Office 365 Solutions</option>
+					<option value="IP Camera">07: IP Camera</option>
+					<option value="Endpoint Management & Modern Deployment">08: Endpoint Management & Modern Deployment</option>
+					<option value="Microsoft Office 365 Solutions">09: Microsoft Office 365 Solutions</option>
                                     </select>
                                 </div>
 
@@ -1107,7 +1110,7 @@
 
             const chatMessages = document.getElementById('chatMessages');
 
-            // Append User Message securely using textContent (preventing XSS)
+            // Securely append user message using textContent to prevent XSS
             const userBubble = document.createElement('div');
             userBubble.className = 'bg-brand-gold/10 border border-brand-gold/30 text-white p-3 rounded-xl ml-auto max-w-[85%]';
             userBubble.textContent = msg;
